@@ -3,6 +3,8 @@ package br.com.zupacademy.lidiane.proposta.novaProposta;
 import java.math.BigDecimal;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -35,6 +37,9 @@ public class Proposta {
 	
 	@NotNull
 	private String endereco;
+	
+	@Enumerated(EnumType.STRING)
+	private Status status;
 
 	/*
 	 * @deprecated apenas para o uso do hibernate
@@ -57,6 +62,22 @@ public class Proposta {
 
 	public Long getId() {
 		return id;
-	}	
+	}
+
+
+	public String getNome() {
+		return nome;
+	}
+
+
+	public String getDocumento() {
+		return documento;
+	}
+
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+	
+		
 	
 }
