@@ -1,4 +1,4 @@
-package br.com.zupacademy.lidiane.proposta.novaProposta;
+package br.com.zupacademy.lidiane.proposta.sistemasexternos.analise;
 
 public class AnaliseDePropostaRequest {
 	

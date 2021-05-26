@@ -1,4 +1,6 @@
-package br.com.zupacademy.lidiane.proposta.novaProposta;
+package br.com.zupacademy.lidiane.proposta.sistemasexternos.analise;
+
+import br.com.zupacademy.lidiane.proposta.novaProposta.Status;
 
 public class AnaliseDePropostaResponse {
 	
