@@ -85,6 +85,14 @@ public class NovaPropostaController {
 		URI location = uribuilder.path("/api/propostas/{id}").build(novaProposta.getId());
 			return ResponseEntity.created(location).build();
 	}
-
+	
+	@GetMapping("/{id}")
+	public ResponseEntity<PropostaDto> consultaStatus(@PathVariable Long id) {
+		Optional<Proposta> proposta = propostaRepository.findById(id);
+		if (proposta.isPresent()) {
+			return ResponseEntity.ok(new PropostaDto(proposta.get()));
+		}
+		return ResponseEntity.notFound().build();
+	}
 	
 }
