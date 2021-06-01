@@ -90,6 +90,7 @@ public class NovaPropostaController {
 	public ResponseEntity<PropostaDto> consultaStatus(@PathVariable Long id) {
 		Optional<Proposta> proposta = propostaRepository.findById(id);
 		if (proposta.isPresent()) {
+			
 			return ResponseEntity.ok(new PropostaDto(proposta.get()));
 		}
 		return ResponseEntity.notFound().build();
