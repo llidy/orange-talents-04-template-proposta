@@ -28,6 +28,8 @@ services:
     ports:
      - 3307:3306
     environment:
+      BD_USERNAME: root
+      BD_PASSWORD: admin
       MYSQL_ROOT_PASSWORD: admin
       MYSQL_DATABASE: db_propostas
 
